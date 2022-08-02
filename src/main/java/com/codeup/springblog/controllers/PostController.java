@@ -6,24 +6,23 @@ public class PostController {
     @GetMapping("/posts")
     @ResponseBody
     public String posts() {
-        return "<h1>Posts index page</h1>";
+        return "/posts/index";
     }
 
     @RequestMapping(path = "/posts/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public String viewAd(@PathVariable String id) {
-        return String.format("Now viewing %s", id);
+    public String viewAd(@PathVariable long id) {
+        return "/posts/view";
     }
 
     @RequestMapping (value = "/posts/create", method = RequestMethod.GET)
     @ResponseBody
-    public String create() {
-        return "<h1>Create your own ad here!</h1>";
+    public String viewCreate() {
+        return "/posts/create";
     }
-//    @RequestMapping (value = "/posts/create", method = RequestMethod.POST)
-//    @ResponseBody
-//    public String create() {
-//        return ;
-//    }
+    @PostMapping (path = "/posts/create")
+    public String postCreate() {
+        return null;
+    }
 }
 
