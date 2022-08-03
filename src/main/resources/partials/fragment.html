@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<header th:fragment="header">
-<head>
+<head th:fragment="head (title)">
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title th:text="${title}">Title</title>
+    <link rel="stylesheet" href="partials/css/style.css">
 </head>
-</header>
+
 <body>
-<h1 th:fragment="fragment"></h1>
-<div th:replace></div>
 
 <nav th:fragment="navbar">
 <div class="topnav">
