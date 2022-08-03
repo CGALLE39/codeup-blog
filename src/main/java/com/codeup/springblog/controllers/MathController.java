@@ -14,11 +14,11 @@ public class MathController {
     }
 
     /// OR
-    @RequestMapping(path = "/add/{num}/and/{num2}", method = RequestMethod.GET)
-    @ResponseBody
-    public String addFormat(@PathVariable int num, @PathVariable  int num2) {
-        return  String.format("d% + d% = d%", num, num2, num + num2);
-    }
+//    @RequestMapping(path = "/add/{num}/and/{num2}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String addFormat(@PathVariable int num, @PathVariable  int num2) {
+//        return  String.format("%d + %d = %d", num, num2, num + num2);
+//    }
 
 
 
