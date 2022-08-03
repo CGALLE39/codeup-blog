@@ -13,7 +13,7 @@ public class RollDice {
     if (n == randomRoll) {
         return "YOU WIN ";
     } else {
-        return "YOU SUCK";
+        return "<h1>YOU SUCK</h1>";
     }
 }
 
